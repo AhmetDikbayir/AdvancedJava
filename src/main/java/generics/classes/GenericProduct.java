@@ -15,7 +15,7 @@ package generics.classes;
        S,U,V , vb --> 2., 3. ve 4. tipler için
      */
 public class GenericProduct<T> {
-    private T code; //T herhangi bir data tipi
+    private T code; //T herhangi bir  NON-PRIMITIVE data tipi
 
     //getter-setter
 
