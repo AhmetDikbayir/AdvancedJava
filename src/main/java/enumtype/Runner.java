@@ -6,9 +6,14 @@ public class Runner {
         printPasswordStrengthConstant("MEDIUM");
         printPasswordStrengthConstant("GOOD");
         printPasswordStrengthConstant("perfect");// CTE RTE yok, fakat istenen işlev gerçekleşmez
-
+        printPasswordStrengthConstant("");
         //ÇÖZÜM: sabit ve sınırlı sayıda değişkeni sadece parametre için kullanmak
         //ENUM TYPE
+
+        System.out.println("-------------------------");
+        printPasswordStrengthEnum(PasswordStrength.LOW);
+        printPasswordStrengthEnum(PasswordStrength.MEDIUM);
+        printPasswordStrengthEnum(PasswordStrength.HIGH);
 
     }
 
@@ -22,4 +27,23 @@ public class Runner {
             System.out.println("Tebrikler password gücünüz yüksek");
         }
     }
+
+    //enum type ile aynı method
+    public static void printPasswordStrengthEnum(PasswordStrength strength){
+        if(strength.equals(PasswordStrength.LOW)){
+            System.out.println("Password gücünüz düşüktür");
+            System.out.println("Seviye : " + PasswordStrength.LOW.getLEvel());
+        } else if (strength.equals(PasswordStrength.MEDIUM)) {
+            System.out.println("Password gücünüz orta seviyededir.");
+        } else if (strength.equals(PasswordStrength.HIGH)) {
+        //} else if (strength.ordinal()==2) {
+
+
+            System.out.println("Tebrikler password gücünüz yüksek");
+        }
+
+        System.out.println("Enum sırası : " +strength.ordinal());
+        System.out.println("Enum ismi : " + strength.name());
+    }
+
 }

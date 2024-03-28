@@ -2,9 +2,10 @@ package enumtype;
 
 public enum PasswordStrength {
 
-    LOW(10),
-    MEDIUM(50),
-    HIGH(100);
+    FAIL(0),//0
+    LOW(10),//0 --> 1
+    MEDIUM(50),//1 --> 2
+    HIGH(100);//2 --> 3
 
     private final int level;
 
