@@ -1,7 +1,7 @@
 package threads;
 
 public class Volatile01 {
-    public static volatile int flag = 0;//cache alınıyor
+    public static volatile int flag = 0;//değişkenin değerinin main memorye alınmasını garanti eder.
     public static void main(String[] args) {
 
         Thread thread1 = new Thread(new Runnable() {//1.çekirdekte
